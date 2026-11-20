@@ -1,5 +1,7 @@
 # 🛡️ DealGuard
 
+[![Update deals](https://github.com/jherney/dealguard/actions/workflows/update-deals.yml/badge.svg)](https://github.com/jherney/dealguard/actions/workflows/update-deals.yml)
+
 Find the best deals online — and only from retailers you can trust. Every deal card
 carries its retailer's safety grade, so a cheap price never costs you your card details.
 
