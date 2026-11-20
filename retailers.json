@@ -1,3 +1,21 @@
 {
-  "retailers": []
+  "retailers": [
+    {
+      "id": "slickdeals",
+      "name": "Slickdeals",
+      "domain": "slickdeals.net",
+      "category": "General",
+      "shipping": "See retailer",
+      "returnsWindow": "See retailer",
+      "auto": true,
+      "signals": {
+        "https": true,
+        "returns": null,
+        "contact": null,
+        "securePayments": null,
+        "reviews": null,
+        "domainYears": 27
+      }
+    }
+  ]
 }
