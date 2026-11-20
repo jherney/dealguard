@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DealGuard — Best Deals, Safest Retailers</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a class="logo" href="#top">🛡️ DealGuard</a>
+    <nav>
+      <a href="#deals">Deals</a>
+      <a href="#retailers">Retailers</a>
+      <a href="#checker">Safety Checker</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <h1>Find the lowest prices.<br /><span class="accent">Shop only the safest stores.</span></h1>
+    <p class="sub">Every deal is scored against its retailer's trust rating — so a cheap price never costs you your card details.</p>
+    <div class="hero-search">
+      <input id="heroSearch" type="search" placeholder="Search deals — headphones, laptops, sneakers…" />
+      <button id="heroGo">Search deals</button>
+    </div>
+  </section>
+
+  <section class="stats wrap" id="statsBar"></section>
+
+  <section id="deals" class="wrap">
+    <h2>Today's top deals</h2>
+    <div class="toolbar">
+      <input id="q" type="search" placeholder="Filter deals…" />
+      <select id="cat"><option value="all">All categories</option></select>
+      <label class="range-label">Min discount <span id="discVal">0%</span>
+        <input id="minDisc" type="range" min="0" max="70" value="0" step="5" />
+      </label>
+      <select id="sort">
+        <option value="discount">Biggest discount</option>
+        <option value="priceAsc">Lowest price</option>
+        <option value="priceDesc">Highest price</option>
+        <option value="safety">Safest retailer</option>
+      </select>
+    </div>
+    <div class="grid deals-grid" id="dealsGrid"></div>
+    <p class="empty" id="dealsEmpty" hidden>No deals match your filters — try lowering the minimum discount.</p>
+  </section>
+
+  <section id="retailers" class="wrap">
+    <h2>Retailer safety directory</h2>
+    <p class="section-sub">Scores combine return policy, payment security, contact transparency, review history, and domain age. <a href="#checker">Check a store we don't list →</a></p>
+    <div class="grid retailers-grid" id="retailersGrid"></div>
+  </section>
+
+  <section id="checker" class="wrap">
+    <h2>Is this store safe?</h2>
+    <p class="section-sub">Paste a store's domain. If it's in our directory you'll get the full report; otherwise we'll run quick heuristic red-flag checks.</p>
+    <div class="checker-row">
+      <input id="domainInput" type="text" placeholder="e.g. techhaven.example.com" />
+      <button id="checkBtn">Check store</button>
+    </div>
+    <div id="checkResult"></div>
+
+    <h3>Manual safety checklist</h3>
+    <p class="section-sub">Shopping somewhere new? Tick what you can verify and get an instant trust verdict.</p>
+    <div class="checklist" id="checklist"></div>
+    <div class="verdict" id="verdict"><strong>Verdict:</strong> <span id="verdictText">Tick items to score this store.</span></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>DealGuard demo — sample data only. Wire in live pricing and reputation APIs before production use.</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
